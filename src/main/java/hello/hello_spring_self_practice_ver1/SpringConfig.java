@@ -1,5 +1,6 @@
 package hello.hello_spring_self_practice_ver1;
 
+import hello.hello_spring_self_practice_ver1.aop.TimeTraceAop;
 import hello.hello_spring_self_practice_ver1.repository.MemberRepository;
 import hello.hello_spring_self_practice_ver1.service.MemberService;
 import org.springframework.context.annotation.Bean;
@@ -19,9 +20,9 @@ public class SpringConfig {
         return new MemberService(memberRepository);
     }
 
-//    @Bean
-//    public TimeTraceAop timeTraceAop() {
-//        return new TimeTraceAop();
-//    }
+    @Bean
+    public TimeTraceAop timeTraceAop() {
+        return new TimeTraceAop();
+    }
 
 }
